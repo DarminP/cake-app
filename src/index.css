@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+.mainTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 140px;
+}
+.welcomeSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.welcomeButton{
+    width: 200px;
+    height: 60px;
+    background-color: #7B5F5B;
+    color: #E8DEC6;
+    text-align: center;
+    text-decoration: none;
+    font-size: 35px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);
+    font-family: 'Pinyon Script', cursive;
+}
+.welcomeButton a{
+    color: #E8DEC6;
+}
+
+.welcomeButton a:link{
+    text-decoration: none;
+    
+}
+.welcomeButton a:hover{
+    color: white;
+}
+
