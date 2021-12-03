@@ -6,7 +6,6 @@ import title from "../images/title.png";
 
 function WelcomePage() {
     
-   
     return(
         
         <div>
@@ -26,7 +25,6 @@ function WelcomePage() {
                             background-position: center;
                             background-size: auto 100%;
                             background-color: white;
-                            
                         }
                     `}
                     </style>
@@ -37,13 +35,15 @@ function WelcomePage() {
             </div>
             <div className="welcomeSection">
             <button className="welcomeButton"> <a href="/home" >Enter</a></button>
-            
-            
             </div>
         </div>
         ) 
     }
+   
+                            
                     
+            
+            
        
                    
                

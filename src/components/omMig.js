@@ -6,13 +6,14 @@ function OmMig() {
     
     return(
         <div>
-        <h1>om Mig</h1>
-            <Header />
-        </div>
-    ) 
+        <Header />
+        <h1>Om Mig</h1>
+    </div>
+) 
 }
 
 export default OmMig;
+        
 
 
 

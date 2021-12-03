@@ -5,14 +5,15 @@ function Order() {
     
     return(
         <div>
+        <Header />
         <h1>Order</h1>
-          <Header />
-        </div>
-    ) 
+      </div>
+  ) 
 }
 
 
 export default Order;
+        
     
 
 

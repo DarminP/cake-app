@@ -34,4 +34,56 @@
 .welcomeButton a:hover{
     color: white;
 }
+.heroContainer{
+    background-image: url(./images/heroPic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 160px;
+    margin-top: 0;
+}
+.navbar{
+    width: 100%;
+    background-color: rgb(88, 69, 69);
+    height: 50px;
+    box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);
+}
+.navContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.navContainer ul{
+    margin-top: 10px;
+}
+.navContainer ul a{
+    text-decoration: none;
+    color: #E8DEC6;
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+}
+.navContainer ul a:hover{
+    color: white;
+}
+.tagLines{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+.tagLines h2{
+    padding: 0 14% 0 14%;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 70px;
+    color: #a09d98;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+    
+    
 

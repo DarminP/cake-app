@@ -1,23 +1,30 @@
 import react from "react";
-import heroPic from "../images/heroPic.png"
 import Navbar from "./navbar";
 
 
 function Header() {
-   
     
     return(
         
+        <div>
             <div className="heroContainer">
-                <img src={heroPic} alt="Title"></img>
-                <div>
-                    <Navbar />
-                </div>
+               <div className="tagLines">
+                    <h2>Lyx</h2>
+                    <h2>smak</h2>
+                    <h2>design</h2>
+               </div> 
             </div>
+            <div>
+                <Navbar />
+            </div>
+        </div>
         
-    ) 
-}
-export default Header;
+        ) 
+    }
+    export default Header;
+    
+   
+    
     
     
 
