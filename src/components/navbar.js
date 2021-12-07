@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return(
-        <div>
+        <div className="nav">
             <div className="navbar">
                 <div className="navContainer">
                     <ul>
                         <Link to="/Home">Home</Link>
-                        <Link to="/omMig">Om Mig</Link>
                         <Link to="/galleri">Galleri</Link>
-                        <Link to="/order">Order</Link>
+                        <Link to="/order">Beställning</Link>
+                        <Link to="/post">Posts</Link>
                     </ul>
                 </div>
             
@@ -20,8 +20,9 @@ function Navbar() {
     ) 
 }
 
-  
+    
 export default Navbar;
+
   
     
 

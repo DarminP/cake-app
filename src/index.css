@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 .mainTitle{
     display: flex;
     align-items: center;
@@ -23,6 +25,9 @@
     box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);
     font-family: 'Pinyon Script', cursive;
 }
+.welcomeButton:hover{
+    background-color: #917773;
+}
 .welcomeButton a{
     color: #E8DEC6;
 }
@@ -34,6 +39,8 @@
 .welcomeButton a:hover{
     color: white;
 }
+/* Here i´m styling header component*/
+
 .heroContainer{
     background-image: url(./images/heroPic.png);
     background-repeat: no-repeat;
@@ -42,12 +49,17 @@
     height: 160px;
     margin-top: 0;
 }
+.header{
+    position: sticky;
+    top: 0;
+}
 .navbar{
     width: 100%;
     background-color: rgb(88, 69, 69);
     height: 50px;
     box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);
 }
+
 .navContainer{
     display: flex;
     align-items: center;
@@ -62,16 +74,17 @@
     color: #E8DEC6;
     margin: 0 20px 0 20px;
     font-size: 20px;
+    font-family: 'Lora', serif;
 }
 .navContainer ul a:hover{
     color: white;
 }
 .tagLines{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 40px;
+    
 }
 .tagLines h2{
     padding: 0 14% 0 14%;
@@ -79,11 +92,253 @@
     font-size: 70px;
     color: #a09d98;
 }
+.tagLines h2:first-child, .tagLines h2:last-child{
+    padding-top: 50px;
+}
 
 h1{
     text-align: center;
     font-size: 40px;
 }
+
+/* Here i´m styling about me(om mig) page*/
+
+.presentationSection{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    background-image: linear-gradient(to bottom right,  white, rgba(194, 157, 157, 0.6));
+    text-align: center;
+}
+.titlePic{
+    padding-top: 30px;
+}
+.line{
+    width: 85%;
+    border-bottom: 2.5px solid rgba(168, 135, 135, 0.6);
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.profileSection{
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+}
+.profileSection img{
+    width: 400px;
+    height: 480px;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+.profileText{
+    padding-left: 120px;
+    margin-right: 20px;
+    width: 700px;
+}
+.profileText h2{
+    font-size: 70px;
+    font-family: 'Pinyon Script', cursive;
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(88, 69, 69);
+}
+.profileText p{
+    padding-bottom: 20px;
+    color: rgb(44, 39, 39);
+    font-family: 'Mali', cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-shadow: .5px .5px 1px rgb(77, 72, 72);
+}
+
+/* Here i´m styling picture part of the about me page*/
+.pitruresSection{
+    padding: 100px 0 200px 0;
+}
+.pitruresSection img{
+    width: 200px;
+    box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);
+    /* padding: 0 10px 0 10px; */
+    
+}
+
+.pitruresSection img:first-child{
+    margin-right: -10px;
+    margin-bottom: -100px;
+    
+}
+
+.pitruresSection img:nth-child(3){
+    margin-left: 40px;
+    margin-right: -10px;
+    z-index: 1;
+    
+}
+.pitruresSection img:nth-child(4){
+    
+    margin-bottom: -100px;
+}
+.buttonArea{
+    padding-bottom: 200px;
+}
+.undertitleProfil{
+    font-size: 40px;
+    font-family: 'Mali', cursive;
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(88, 69, 69);
+}
+
+/* Here i´m styling Footer*/
+
+.myFooter{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(88, 69, 69);
+    display: flex;
+    justify-content: center;
+}
+.footerText{
+    font-family: 'Mali', cursive;
+    font-size: 20px;
+    color: white;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+.myFooter a{
+    color: rgb(173, 168, 168);
+    font-size: 25px;
+    padding-top: 20px;
+}
+.myFooter a:hover{
+    color: white;
+}
+
+.galleriTemp{
+    padding-top: 100px;
+    height: 1000px;
+    font-family: 'Mali', cursive;
+    color: rgb(88, 69, 69);
+    font-size: 60px;
+
+}
+/* Here i´m styling order page*/
+.orderTitle{
+    font-family: 'Mali', cursive;
+    color: rgb(88, 69, 69);
+    font-size: 60px;
+    padding: 80px 0 80px 0;
+}
+.orderStyle{
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    padding-bottom: 100px;
+    padding-left: 190px;
+}
+ .orderFormStyle label{
+    color:rgb(88, 69, 69);
+    font-family: 'Mali', cursive;
+    font-size: 25px;
+    text-shadow: .5px .5px 1px rgb(77, 72, 72);
+}
+
+ .orderFormStyle input{
+    
+    background-color: rgb(248, 240, 240);
+    border-radius: 5px;
+    height: 30px;
+    color:rgb(59, 47, 47);
+    font-family: 'Mali', cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border: 1.5px solid rgb(88, 69, 69);
+    text-shadow: .5px .5px 1px rgb(77, 72, 72);
+    margin-left: 10px;
+} 
+.orderFormStyle ::placeholder{
+    color: rgb(192, 180, 180);
+    text-shadow: none;
+}
+
+/* Here i´m styling Post Page*/
+
+.postPage{
+    height: 1000px;
+}
+.postTitle{
+    font-family: 'Mali', cursive;
+    color: rgb(88, 69, 69);
+    font-size: 60px;
+    padding-top: 80px;
+    padding-bottom: 300px;
+}
+.newPosteCreate{
+    width: 500px;
+    margin:0 auto;
+    text-align: left;
+    padding-top: 30px;
+    font-family: 'Mali', cursive;
+    color: rgb(41, 35, 35);
+}
+.newPosteCreate input{
+    width: 500px;
+    height: 30px;
+}
+.newPosteCreate button{
+    margin-left: 40%;
+    background-color: rgb(88, 69, 69);
+}
+.newPosteCreate button:hover{
+    background-color: rgb(119, 106, 106);
+}
+.label2 input{
+    height: 200px;
+    margin-bottom: 20px;
+}
+.createButton{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-family: 'Mali', cursive;
+    color: white;
+    
+}
     
     
 
+
+/* Here i´m styling responsivnes*/
+
+@media screen and (max-width: 1600px){
+    .presentationSection{
+        width: 100%;
+    }
+    .profileSection img{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .profileSection{
+        flex-direction: column;
+
+    }
+    .profileSection img{
+        margin: auto;
+        width: 400px;
+        height: 480px;
+        margin-bottom: 80px;
+    }
+    .profileText{
+        padding: 0 20px 0 20px;
+        margin: 0;
+        width: 90%;
+        text-align: center;
+    }
+}

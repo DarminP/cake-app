@@ -1,27 +1,20 @@
-import react from "react";
+import react, { useState, useEffect } from "react";
 import Header from "./header";
 import Footer from "./footer";
 
 
-function Galleri() {
+function Posts() {
     
     return(
         <div>
-        <Header /> 
+        <Header />
         <div className="presentationSection">
-        <h2 className="galleriTemp">Galleri</h2> 
+        <h2 className="galleriTemp">Posts</h2> 
         <Footer />
         </div>
-        
       </div>
   ) 
 }
 
-export default Galleri;
-        
 
-    
-
-    
-
-
+export default Posts;
