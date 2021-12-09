@@ -1,4 +1,5 @@
 import React from "react";
+import "../cssFiles/addPost.css";
 class AddPost extends React.Component {
   constructor(props) {
     super(props);

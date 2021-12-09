@@ -1,5 +1,6 @@
 import react from "react";
 import Navbar from "./navbar";
+import "../cssFiles/header.css"
 
 
 
@@ -16,7 +17,7 @@ function Header() {
                </div> 
             </div>
             <div>
-                <Navbar />
+                 <Navbar />
             </div>
         </div>
         

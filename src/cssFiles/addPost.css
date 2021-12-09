@@ -1,0 +1,41 @@
+.postPage{
+    height: 1000px;
+}
+.postTitle{
+    font-family: 'Mali', cursive;
+    color: rgb(88, 69, 69);
+    font-size: 60px;
+    padding-top: 80px;
+    padding-bottom: 300px;
+}
+.newPosteCreate{
+    width: 500px;
+    margin:0 auto;
+    text-align: left;
+    padding-top: 30px;
+    font-family: 'Mali', cursive;
+    color: rgb(41, 35, 35);
+}
+.newPosteCreate input{
+    width: 500px;
+    height: 30px;
+}
+.newPosteCreate button{
+    margin-left: 40%;
+    background-color: rgb(88, 69, 69);
+}
+.newPosteCreate button:hover{
+    background-color: rgb(119, 106, 106);
+}
+.label2 input{
+    height: 200px;
+    margin-bottom: 20px;
+}
+.createButton{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-family: 'Mali', cursive;
+    color: white;
+    
+}

@@ -13,6 +13,7 @@ import Photo9 from "../images/photo9.jpg"
 import Photo10 from "../images/photo10.jpg"
 import Photo11 from "../images/photo11.jpg"
 import Photo12 from "../images/photo12.jpg"
+import "../cssFiles/gallery.css"
 
 
 

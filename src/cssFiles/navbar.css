@@ -1,0 +1,19 @@
+.navContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.navContainer ul{
+    margin-top: 10px;
+}
+.navContainer ul a{
+    text-decoration: none;
+    color: #E8DEC6;
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+}
+.navContainer ul a:hover{
+    color: white;
+}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Header from "./header";
 import Footer from "./footer";
+import  "../cssFiles/order.css";
 
 function Order() {
     
@@ -136,16 +137,16 @@ function Order() {
         <br />
         <br />
         {/* Type of cake input */}
-        <div>
+        <div className="typeOfCake">
           <label>
-            Type of cake :
+            Välj smak :
             <select
               id="sel"
               value={type}
               onChange={(e) => setType(e.target.value)}
               required
             >
-              <option value="">Välj smak</option>
+              <option value="">smak</option>
               <option value="Choclate">Choclate</option>
               <option value="Red velwet">Red velvet</option>
               <option value="Vanilj">Vanilj</option>
@@ -155,8 +156,8 @@ function Order() {
         <br />
         <br />
         {/* Number of pieces input */}
-        <div>
-          <lable>Antal bytar :</lable>
+        <div className="numberPieces">
+          <label>Antal bytar :</label>
           <select
             value={pieces}
             onChange={(e) => setPieces(e.target.value)}
@@ -171,11 +172,11 @@ function Order() {
         <br />
         <br />
         {/* Design input */}
-        <div>
+        <div className="design">
           <label>Design :</label>
           <br />
           <br />
-          <label>
+          <label className="designLabel2">
             Simple
             <input
               type="radio"
@@ -211,9 +212,9 @@ function Order() {
         <br />
         <br />
         {/* alergi input */}
-        <div>
+        <div className="alergier">
           <label>
-            Dina alergier :
+            Skriv gärna om du har några alergier:
             <input
               type="text"
               name="alergi"
@@ -226,7 +227,7 @@ function Order() {
         <br />
         <br />
         {/* Date of ceremony input  */}
-        <div>
+        <div className="datumPick">
           <label>
             Välj datum :
             <input
@@ -240,8 +241,8 @@ function Order() {
         <br />
         <br />
         {/* material input  */}
-        <div>
-          <label>Materials : </label>
+        <div className="materials">
+          <label>Materials:</label>
           Banana
           <input
             value="banana"
