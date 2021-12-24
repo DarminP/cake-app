@@ -1,4 +1,4 @@
-import react from "react";
+// import react from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Aida from "../images/Aida.png"
@@ -18,7 +18,7 @@ function Home() {
             <img className="titlePic" src={title} alt="Title"></img>
             <div className="line"></div>
             <div className="profileSection">
-                <img src={Aida}/>
+                <img src={Aida} alt="aida"/>
                 <div className="profileText">
                     <h2>Välkomen till min sida</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, auctor sit amet ligula at, efficitur malesuada tortor. Maecenas at ullamcorper justo, at interdum nisi. Praesent et urna tortor. Mauris egestas facilisis ipsum ac fermentum. Morbi vel elit at ante molestie dapibus id vitae massa</p>

@@ -1,4 +1,4 @@
-import react from "react";
+// import react from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Photo1 from "../images/photo1.jpg"
@@ -25,18 +25,18 @@ function Galleri() {
         <div className="presentationSection">
         <h2 className="galleryTitle">Galleri</h2> 
         <div className="gridContainer">
-        <img src={Photo1}/>
-        <img src={Photo2}/>
-        <img src={Photo3}/>
-        <img src={Photo4}/>
-        <img src={Photo5}/>
-        <img src={Photo6}/>
-        <img src={Photo7}/>
-        <img src={Photo8}/>
-        <img src={Photo9}/>
-        <img src={Photo10}/>
-        <img src={Photo11}/>
-        <img src={Photo12}/>
+        <img src={Photo1} alt="cake"/>
+        <img src={Photo2} alt="cake2"/>
+        <img src={Photo3} alt="cake3"/>
+        <img src={Photo4} alt="cake4"/>
+        <img src={Photo5} alt="cake5"/>
+        <img src={Photo6} alt="cake6"/>
+        <img src={Photo7} alt="cake7"/>
+        <img src={Photo8} alt="cake8"/>
+        <img src={Photo9} alt="cake9"/>
+        <img src={Photo10} alt="cake10"/>
+        <img src={Photo11} alt="cake11"/>
+        <img src={Photo12} alt="cake12"/>
         </div>
         <Footer />
         </div>
