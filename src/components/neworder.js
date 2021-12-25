@@ -10,12 +10,14 @@ class NewOrder extends React.Component{
         this.state = {taste: 'choosetaste'};
         this.state = {fullname: "", email:"", adress:"", phonenumber:""};
         this.state = {size:""};
+        this.state = {message:""};
         
         this.handleChangeInputs = this.handleChangeInputs.bind(this);
         this.handleChangeDesign = this.handleChangeDesign.bind(this);
         this.handleChangeTaste = this.handleChangeTaste.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSize = this.handleSize.bind(this);
+        this.handleMessage = this.handleMessage.bind(this);
     }
         
     handleChangeInputs(event, field) {
@@ -34,22 +36,28 @@ class NewOrder extends React.Component{
         this.setState({size: event.target.value});
         // alert(this.state.size);
     }
+    handleMessage(event) {
+        this.setState({message: event.target.value});
+        console.log(this.state.message);
+    }
 
     handleSubmit(event) {
-        alert('du har valt: ' + 
-        this.state.design + 
+        alert(' du har valt: ' + 
+        this.state.design + "\n" +
         " smak: " + 
-        this.state.taste + 
-        " Dit Namn: " + 
-        this.state.fullname + 
+        this.state.taste + "\n" +
+        " Ditt Namn: " + 
+        this.state.fullname + "\n" +
         " Email: " + 
-        this.state.email + 
+        this.state.email + "\n" +
         " Din Adress: " + 
-        this.state.adress +
+        this.state.adress + "\n" +
         " Tel nr: " +
-        this.state.phonenumber +
+        this.state.phonenumber + "\n" +
         " storlek på din tårta är: " +
-        this.state.size
+        this.state.size + "\n" + 
+        " Meddelande till Aida: " +
+        this.state.message
         );
 
         event.preventDefault();
@@ -62,7 +70,7 @@ class NewOrder extends React.Component{
                 <Header/>
                 <div className="formContainer">
                 <form className="newForm" on onSubmit={this.handleSubmit}>
-                <h2 className="newOrderTitle">Beställ en tårta som passar dig!</h2>
+                <h2 className="newOrderTitle">Beställ tårtan som passar dig!</h2>
                 <div className="inputs">
                 <label>
                 Skriv ditt namn
@@ -74,16 +82,16 @@ class NewOrder extends React.Component{
                 </label>
                 <label>
                 Hemadress
-                    <input name="text" type="adress" value={this.state.inputs} onChange={(event) => this.handleChangeInputs(event, "adress")}></input>
+                    <input name="adress" type="text" value={this.state.inputs} onChange={(event) => this.handleChangeInputs(event, "adress")}></input>
                 </label>
                 <label>
                 Telefonnummer
-                    <input name="text" type="phonenumber" value={this.state.inputs} onChange={(event) => this.handleChangeInputs(event, "phonenumber")}></input>
+                    <input name="phonenumber" type="number" value={this.state.inputs} onChange={(event) => this.handleChangeInputs(event, "phonenumber")}></input>
                 </label>
-               <label>
-               Välj design
+                <label>
+                Välj design
                 <select value={this.state.design} onChange={this.handleChangeDesign}>
-                    <option value="choosedesign">--Välj desing för din tårta--</option>
+                    <option value="choosedesign">--Välj design för din tårta--</option>
                     <option value="Enkel Design">Enkel Design</option>
                     <option value="Avancerat Design">Avancerat Design</option>
                     <option value="Super Lyx Design">Super-Lyx Design</option>
@@ -102,21 +110,26 @@ class NewOrder extends React.Component{
                 <div className="radioButtonArea">
                 <label>
                 10 bitar
-                <input type="radio" value="10 bitar" onChange={this.handleSize}/>
+                <input type="radio" value="10 bitar" checked={this.state.size === "10 bitar"}  onChange={this.handleSize}/>
                 </label>
                 <label>
                 15 bitar
-                <input type="radio" value="15 bitar" onChange={this.handleSize} />
+                <input type="radio" value="15 bitar" checked={this.state.size === "15 bitar"}   onChange={this.handleSize} />
                 </label>
                 <label>
                 20 bitar
-                <input type="radio" value="20 bitar" onChange={this.handleSize} />
+                <input type="radio" value="20 bitar" checked={this.state.size === "20 bitar"}  onChange={this.handleSize} />
                 </label>
                 </div>
+                <label className="messageLabel">
+                Berätta gärna om övriga önskemål för din tårta
+                <textarea className="messageAida" name="message" type="textarea" onChange={this.handleMessage}/>
+                </label>
                 <button className="newOrderButton">Submit</button>  
                 </div>
                 </form>
                 </div>
+                <p>{this.state.size}</p>
                 <Footer />
             </div>
         )
