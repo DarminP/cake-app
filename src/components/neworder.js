@@ -1,7 +1,9 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
+import emailjs from "emailjs-com";
 import "../cssFiles/form.css"
+
 
 class NewOrder extends React.Component{
     constructor(props) {
@@ -18,7 +20,9 @@ class NewOrder extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSize = this.handleSize.bind(this);
         this.handleMessage = this.handleMessage.bind(this);
+        
     }
+    
         
     handleChangeInputs(event, field) {
 
@@ -27,14 +31,15 @@ class NewOrder extends React.Component{
 
     handleChangeDesign(event) {
         this.setState({design: event.target.value});
-    
+        console.log(this.state.design);
     }
     handleChangeTaste(event) {
         this.setState({taste: event.target.value});
+        console.log(this.state.taste);
     }
     handleSize(event) {
         this.setState({size: event.target.value});
-        // alert(this.state.size);
+        console.log(this.state.size);
     }
     handleMessage(event) {
         this.setState({message: event.target.value});
@@ -42,29 +47,24 @@ class NewOrder extends React.Component{
     }
 
     handleSubmit(event) {
-        alert(' du har valt: ' + 
-        this.state.design + "\n" +
-        " smak: " + 
-        this.state.taste + "\n" +
-        " Ditt Namn: " + 
-        this.state.fullname + "\n" +
-        " Email: " + 
-        this.state.email + "\n" +
-        " Din Adress: " + 
-        this.state.adress + "\n" +
-        " Tel nr: " +
-        this.state.phonenumber + "\n" +
-        " storlek på din tårta är: " +
-        this.state.size + "\n" + 
-        " Meddelande till Aida: " +
-        this.state.message
-        );
+       
+        
+        // alert(this.state.taste);
 
         event.preventDefault();
-    }
+
+        emailjs.sendForm('service_hypns7g','template_yssusul', event.target,'user_18gjYn5LcxH7O4Lmlc4ca')
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+          })
+          .catch((err) => {
+            console.log('FAILED...', err);
+          });
+    };
    
     
     render(){
+        const { selectedOption } = this.state;
         return(
             <div>
                 <Header/>
@@ -91,7 +91,7 @@ class NewOrder extends React.Component{
                 <label>
                 Välj design
                 <select value={this.state.design} onChange={this.handleChangeDesign}>
-                    <option value="choosedesign">--Välj design för din tårta--</option>
+                    <option value="chooseDesign">--Välj design för din tårta--</option>
                     <option value="Enkel Design">Enkel Design</option>
                     <option value="Avancerat Design">Avancerat Design</option>
                     <option value="Super Lyx Design">Super-Lyx Design</option>
@@ -129,7 +129,7 @@ class NewOrder extends React.Component{
                 </div>
                 </form>
                 </div>
-                <p>{this.state.size}</p>
+                <p>{this.state.design}</p>
                 <Footer />
             </div>
         )
