@@ -69,23 +69,7 @@ class NewOrder extends React.Component{
         emailjs.send('service_hypns7g','template_yssusul', templateParams,'user_18gjYn5LcxH7O4Lmlc4ca')
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
-            alert(
-                
-                'Mail har skickats till Aida' + '\n' + '\n' +
-                ' du har valt: ' + 
-                this.state.design + '\n' +
-                " smak: " + 
-                this.state.taste +  '\n' +
-                " Dit Namn: " + 
-                this.state.fullname +  '\n' +
-                " Email: " + 
-                this.state.email +  '\n' +
-                " Din Adress: " + 
-                this.state.adress + '\n' +
-                " Tel nr: " +
-                this.state.phonenumber + '\n' +
-                " storlek på din tårta är: " +
-                this.state.value)
+            alert('Mail har skickats till Aida')
           })
           .catch((err) => {
             console.log('FAILED...', err);
@@ -110,7 +94,7 @@ class NewOrder extends React.Component{
                 
                 </div>
                 <form className="newForm" onSubmit={this.handleSubmit}>
-                <img className="formBackground" src={Baking} />
+                <img className="formBackground" src={Baking} alt="Form"/>
                 <div className="inputs">
                 <label>
                 Skriv ditt namn
@@ -191,14 +175,10 @@ class NewOrder extends React.Component{
                </div>
                <div className="buttonArea">
                <button className="newOrderButton" onClick={this.handleCloseModal}>Gå tillbaka</button>
-               <button className="newOrderButton" onClick={this.handleSendMail} >Skicka din order till Aida</button> 
-               
+               <button className="newOrderButton" onClick={this.handleSendMail} >Skicka din order till Aida</button>              
                </div>
-             </Modal>
-             
-        
-                
-                <Footer />
+             </Modal>  
+            <Footer />
             </div>
             </div>
         )
