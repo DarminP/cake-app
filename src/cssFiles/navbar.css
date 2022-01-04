@@ -10,10 +10,24 @@
 .navContainer ul a{
     text-decoration: none;
     color: #E8DEC6;
-    margin: 0 20px 0 20px;
+    /* margin: 0 20px 0 20px; */
     font-size: 20px;
     font-family: 'Lora', serif;
 }
 .navContainer ul a:hover{
     color: white;
+}
+.link{
+    padding: 10px 60px 10px 60px; 
+    border-left: 1px solid  #ac8980; 
+    transition: all 0.3s ease-out;
+}
+.link:last-child{
+    border-right: 1px solid  #ac8980
+}
+.link:hover{
+    background-color: #ac8980;
+}
+.link::after{
+    background-color: #ac8980;
 }

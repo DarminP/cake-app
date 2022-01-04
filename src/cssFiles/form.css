@@ -1,12 +1,24 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+
+.orderTitle{
+    font-family: 'Mali', cursive;
+    color: rgb(88, 69, 69);
+    font-size: 60px;
+    padding-top: 80px;
+}
 .formContainer{
-    width: 500px;
-    background-color: rgb(218, 206, 191);
+    width: 1000px;
+    background: linear-gradient(90deg, rgba(235,197,186,1) 0%, rgba(244,239,237,1) 74%);    
     margin: auto;
-    /* height: 70vh; */
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 300px;
     border-radius: 10px;
     box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);
+}
+.newForm{
+    margin-left: 20px;
+    display: flex;
+    padding-bottom: 30px;
 }
 .newOrderTitle{
     font-size: 32px;
@@ -14,15 +26,16 @@
     color: #6d534f;
     text-align: center;
     padding-top: 20px;
-    padding-bottom: 30px;
+   
 }
 
 label, input{
     display: flex;
     flex-direction: column;
     height: 90px;
-    border-radius: 4px;
+    border-radius: 20px;
     border: 1px solid #6d534f; 
+    text-align: left;
 }
 input{
     margin-top: 10px;
@@ -31,6 +44,8 @@ input{
     font-size: 18px;
     color: #6d534f;
     text-align: center;
+    background-color: rgb(218, 206, 191, 0.1);
+    
 }
 select{
     height: 40px;
@@ -41,7 +56,10 @@ select{
     font-size: 20px;
     border-radius: 4px;
     border: 1px solid #6d534f; 
+    background-color: rgb(218, 206, 191, 0.1);
 }
+
+
 .inputs{
     padding: 10px;
     font-family: 'Lora', serif;
@@ -56,16 +74,16 @@ select{
     border-radius: 10px;
     font-size: 25px;
     font-family: 'Lora', serif;
-    color: wheat;
-    background-color: #7B5F5B;
+    background-color: #6d534f;
+    color: white;
     cursor: pointer;
     margin-bottom: 20px;
     margin-top: 30px;
 }
 
 .newOrderButton:hover{
-    background-color: #6e423a;
-    color: white;
+    color: wheat;
+    background-color: #ac8980;
 }
 .radioButtonArea{
     display: flex;
@@ -94,6 +112,11 @@ input[type="radio"] {
     display: grid;
     place-content: center;
 }
+input[type="radio"]:checked {
+    transform: scale(1);
+    background-color: #8d6861;
+}
+
 .newOrderSubTitle{
     text-align: center;
     font-size: 25px;
@@ -102,21 +125,93 @@ input[type="radio"] {
     border-bottom: 1px solid white;
 }
 
-input[type="radio"]:focus {
-    outline: max(2px, 0.15em) solid currentColor;
-    outline-offset: max(2px, 0.15em);
-    background-color: #6e423a;
-}
 .messageAida{
     border-radius: 5px;
     height: 60px;
     font-size: 20px;
     font-family: 'Lora', serif;
     color: #7B5F5B;
-}
-.messageLabel{
-    border-top: 1px solid white;
-    padding-top: 25px;
+    background-color: rgb(218, 206, 191, 0.1);
 }
 
-  
+
+
+/* MODAL*/
+.Modal {
+    margin: 0 auto; 
+    margin-top: 150px; 
+    /* margin-bottom: 50px;  */
+    width: 700px;
+    background-color: rgb(243, 238, 238);
+    border-radius: 10px;
+    box-shadow: 0px 6px 8px 2px rgba(88, 87, 87, 0.6);
+   
+  }
+
+  .Overlay {
+    position: fixed;
+    margin: 0 auto;
+    /* width: 840px;   */
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    
+  } 
+  .finishedOrder{
+      width: 90%;
+      background-color: white;
+      margin: auto;
+      border-radius: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border: 1px solid #7B5F5B;
+    
+  }
+  .Overlay p{
+    font-size: 25px;
+    color: #7B5F5B;
+    margin-top: 10px;
+    padding-left: 20px;
+    border-bottom: 1px solid white;
+    padding: 0;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+   
+  } 
+
+.modalTitle{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 100px;
+    padding-top:20px;
+    font-family: 'Lora', serif;
+    color: #7B5F5B;
+}
+.buttonArea{
+    display: flex;
+    padding: 10px;
+    padding-top: 100px;
+    justify-content: space-around;
+}
+.buttonArea button{
+    width: 300px;
+    background-color: #7B5F5B;
+}
+.Modal i{
+    font-size: 30px;
+    padding: 10px;
+    color: #7B5F5B;
+    cursor: pointer;
+}
+.Modal i:hover{
+    color: rgb(185, 67, 67);
+}
+.formBackground{
+    width: 500px;
+    padding: 20px;  
+}

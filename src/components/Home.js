@@ -34,7 +34,7 @@ function Home() {
             <img  src={photo4} alt="photo4"></img>
             </div>
             <h2 className="undertitleProfil">Se mer bilder i min galleri</h2>
-            <div className="buttonArea">
+            <div className="WelcomeButtonArea">
             <button className="welcomeButton"> <a href="/galleri" >Galleri</a></button>
             </div>
             <Footer />
