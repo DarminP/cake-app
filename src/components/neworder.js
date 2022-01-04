@@ -2,75 +2,115 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import emailjs from "emailjs-com";
-import "../cssFiles/form.css"
-
+import Modal from 'react-modal';
+import "../cssFiles/form.css";
+import Baking from "../images/cakeForm.png";
 
 class NewOrder extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {design: 'choosedesign'};
-        this.state = {taste: 'choosetaste'};
-        this.state = {fullname: "", email:"", adress:"", phonenumber:""};
-        this.state = {size:""};
-        this.state = {message:""};
-        
-        this.handleChangeInputs = this.handleChangeInputs.bind(this);
-        this.handleChangeDesign = this.handleChangeDesign.bind(this);
-        this.handleChangeTaste = this.handleChangeTaste.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleSize = this.handleSize.bind(this);
-        this.handleMessage = this.handleMessage.bind(this);
-        
+        this.state = {
+        design: '',
+        taste: '',
+        fullname: "", email:"", adress:"", phonenumber:"",
+        value:"",
+        message:"",
+        showModal: false
+        };
+        // this.handleOpenModal = this.handleOpenModal.bind(this);
+        // this.handleCloseModal = this.handleCloseModal.bind(this);
     }
-    
+
+    // MODAL
+    handleOpenModal = () => {
+        this.setState({ showModal: true });
+      }
+      
+      handleCloseModal = () => {
+        this.setState({ showModal: false });
+      }    
+    // End MODAL
+
         
-    handleChangeInputs(event, field) {
+    handleChangeInputs = (event, field) => {
 
         this.setState({ [field]: event.target.value });
     }
 
-    handleChangeDesign(event) {
+    handleChangeDesign = event => {
         this.setState({design: event.target.value});
-        console.log(this.state.design);
     }
-    handleChangeTaste(event) {
+    handleChangeTaste = event => {
         this.setState({taste: event.target.value});
-        console.log(this.state.taste);
     }
-    handleSize(event) {
-        this.setState({size: event.target.value});
-        console.log(this.state.size);
+    handleSize = event  => {
+        this.setState({value: event.target.value});
     }
-    handleMessage(event) {
+    
+    handleMessage = event => {
         this.setState({message: event.target.value});
-        console.log(this.state.message);
     }
-
-    handleSubmit(event) {
+    
+    handleSendMail = event => {
        
-        
-        // alert(this.state.taste);
-
         event.preventDefault();
 
-        emailjs.sendForm('service_hypns7g','template_yssusul', event.target,'user_18gjYn5LcxH7O4Lmlc4ca')
+        const templateParams = {
+            value: this.state.value,
+            taste: this.state.taste,
+            message: this.state.message,
+            design:this.state.design,
+            fullname: this.state.fullname,
+            phonenumber: this.state.phonenumber,
+            adress: this.state.adress,
+            email: this.state.email
+        }
+
+        emailjs.send('service_hypns7g','template_yssusul', templateParams,'user_18gjYn5LcxH7O4Lmlc4ca')
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
+            alert(
+                
+                'Mail har skickats till Aida' + '\n' + '\n' +
+                ' du har valt: ' + 
+                this.state.design + '\n' +
+                " smak: " + 
+                this.state.taste +  '\n' +
+                " Dit Namn: " + 
+                this.state.fullname +  '\n' +
+                " Email: " + 
+                this.state.email +  '\n' +
+                " Din Adress: " + 
+                this.state.adress + '\n' +
+                " Tel nr: " +
+                this.state.phonenumber + '\n' +
+                " storlek på din tårta är: " +
+                this.state.value)
           })
           .catch((err) => {
             console.log('FAILED...', err);
           });
     };
-   
-    
+     
+    handleSubmit = event => {
+        this.handleOpenModal(event);
+        event.preventDefault();
+    }
+
     render(){
-        const { selectedOption } = this.state;
+        
         return(
             <div>
                 <Header/>
+                <div className="presentationSection">
+                <h2 className="orderTitle">Beställning</h2> 
                 <div className="formContainer">
-                <form className="newForm" on onSubmit={this.handleSubmit}>
                 <h2 className="newOrderTitle">Beställ tårtan som passar dig!</h2>
+                <div className="formBackground">
+                
+                </div>
+                <form className="newForm" onSubmit={this.handleSubmit}>
+                <img className="formBackground" src={Baking} />
                 <div className="inputs">
                 <label>
                 Skriv ditt namn
@@ -78,7 +118,7 @@ class NewOrder extends React.Component{
                 </label>
                 <label>
                 E-mail
-                    <input name="email" type="email" value={this.state.inputs} onChange={(event) => this.handleChangeInputs(event, "email")}></input>
+                    <input name="email" type="email"  value={this.state.inputs} onChange={(event) => this.handleChangeInputs(event, "email")}></input>
                 </label>
                 <label>
                 Hemadress
@@ -86,7 +126,8 @@ class NewOrder extends React.Component{
                 </label>
                 <label>
                 Telefonnummer
-                    <input name="phonenumber" type="number" value={this.state.inputs} onChange={(event) => this.handleChangeInputs(event, "phonenumber")}></input>
+                    <input name="phonenumber"  type="number" value={this.state.inputs} onChange={(event) => this.handleChangeInputs(event, "phonenumber")}/>
+                    
                 </label>
                 <label>
                 Välj design
@@ -110,27 +151,55 @@ class NewOrder extends React.Component{
                 <div className="radioButtonArea">
                 <label>
                 10 bitar
-                <input type="radio" value="10 bitar" checked={this.state.size === "10 bitar"}  onChange={this.handleSize}/>
+                <input type="radio" name="size-options" value="10 bitar" checked={this.state.value === "10 bitar"}   onChange={this.handleSize}/>
                 </label>
                 <label>
                 15 bitar
-                <input type="radio" value="15 bitar" checked={this.state.size === "15 bitar"}   onChange={this.handleSize} />
+                <input type="radio" name="size-options" value="15 bitar" checked={this.state.value === "15 bitar"}   onChange={this.handleSize} />
                 </label>
                 <label>
                 20 bitar
-                <input type="radio" value="20 bitar" checked={this.state.size === "20 bitar"}  onChange={this.handleSize} />
+                <input type="radio" name="size-options" value="20 bitar" checked={this.state.value === "20 bitar"}  onChange={this.handleSize} />
                 </label>
                 </div>
                 <label className="messageLabel">
                 Berätta gärna om övriga önskemål för din tårta
                 <textarea className="messageAida" name="message" type="textarea" onChange={this.handleMessage}/>
                 </label>
-                <button className="newOrderButton">Submit</button>  
+                <button className="newOrderButton">Se din order</button>               
                 </div>
-                </form>
+                </form>      
                 </div>
-                <p>{this.state.design}</p>
+                <Modal 
+                isOpen={this.state.showModal}
+                contentLabel="onRequestClose Example"
+                onRequestClose={this.handleCloseModal}
+                className="Modal"
+                overlayClassName="Overlay"
+             >
+               <i className="far fa-times-circle" onClick={this.handleCloseModal}></i>
+               <h2 className="modalTitle">Din order</h2>
+               <div className="finishedOrder">
+               <p>{`Ditt namn: ${this.state.fullname}`}</p>
+               <p>{`Email: ${this.state.email}`}</p>
+               <p>{`Hemadress: ${this.state.adress}`}</p>
+               <p>{`Telefonnummer: ${this.state.phonenumber}`}</p>
+               <p>{`Önskad design: ${this.state.design}`}</p>
+               <p>{`Önskad smak: ${this.state.taste}`}</p>
+               <p>{`Önskad storlek: ${this.state.value}`}</p>
+               <p>{`Ovriga önskemål: ${this.state.message}`}</p>
+               </div>
+               <div className="buttonArea">
+               <button className="newOrderButton" onClick={this.handleCloseModal}>Gå tillbaka</button>
+               <button className="newOrderButton" onClick={this.handleSendMail} >Skicka din order till Aida</button> 
+               
+               </div>
+             </Modal>
+             
+        
+                
                 <Footer />
+            </div>
             </div>
         )
     }
