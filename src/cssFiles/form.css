@@ -1,13 +1,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 
-.orderTitle{
-    font-family: 'Mali', cursive;
-    color: rgb(88, 69, 69);
-    font-size: 60px;
-    padding-top: 80px;
-}
+
 .formContainer{
-    width: 1000px;
+    width: 730px;
     background: linear-gradient(90deg, rgba(235,197,186,1) 0%, rgba(244,239,237,1) 74%);    
     margin: auto;
     margin-top: 100px;
@@ -15,31 +10,36 @@
     border-radius: 10px;
     box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);
 }
+.formBackground{
+    width: 360px;
+    height: 100%;
+    padding-top: 30px;  
+}
 .newForm{
     margin-left: 20px;
     display: flex;
     padding-bottom: 30px;
 }
 .newOrderTitle{
-    font-size: 32px;
+    font-size: 24px;
     font-family: 'Lora', serif;
     color: #6d534f;
     text-align: center;
     padding-top: 20px;
    
 }
-
+ 
 label, input{
     display: flex;
     flex-direction: column;
-    height: 90px;
+    height: 65px;
     border-radius: 20px;
     border: 1px solid #6d534f; 
     text-align: left;
 }
 input{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-family: 'Lora', serif;
     font-size: 18px;
     color: #6d534f;
@@ -48,12 +48,12 @@ input{
     
 }
 select{
-    height: 40px;
+    height: 24px;
     margin-top: 10px;
     text-align: center;
     font-family: 'Lora', serif;
     color: #7B5F5B;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 4px;
     border: 1px solid #6d534f; 
     background-color: rgb(218, 206, 191, 0.1);
@@ -61,12 +61,15 @@ select{
 
 
 .inputs{
-    padding: 10px;
+    padding-top: 30px;
     font-family: 'Lora', serif;
-    font-size: 20px;
+    font-size: 16px;
     color: #7B5F5B;
+    margin-left: 20px;
 }
-
+.select-label{
+    height: 60px;
+}
 .newOrderButton{
     width: 100%;
     height: 60px;
@@ -79,29 +82,33 @@ select{
     cursor: pointer;
     margin-bottom: 20px;
     margin-top: 30px;
+    transition: all 0.2s ease-out;
 }
 
 .newOrderButton:hover{
-    color: wheat;
     background-color: #ac8980;
 }
 .radioButtonArea{
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 0;
+    margin-top:10px;
+    height: 50px;
+    
 }
 .radioButtonArea label{
-    margin-right: 40px;
-    font-size: 25px;
+    margin-right: 10px;
+    font-size: 18px;
 }
 .radioButtonArea label input{
-    font-size: 20px;
+    font-size: 16px;
+    
 }
 input[type="radio"] {
     -webkit-appearance: none;
     appearance: none;
     border-style: none;
-    margin-left: 25px;
+    margin-left: 20px;
     font: inherit;
     color: currentColor;
     width: 1.15em;
@@ -119,10 +126,10 @@ input[type="radio"]:checked {
 
 .newOrderSubTitle{
     text-align: center;
-    font-size: 25px;
-    margin-top: 10px;
+    font-size: 20px;
+    margin-top: 6px;
     padding-bottom: 15px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #8d6861;
 }
 
 .messageAida{
@@ -141,7 +148,7 @@ input[type="radio"]:checked {
     margin: 0 auto; 
     margin-top: 150px; 
     /* margin-bottom: 50px;  */
-    width: 700px;
+    width: 500px;
     background-color: rgb(243, 238, 238);
     border-radius: 10px;
     box-shadow: 0px 6px 8px 2px rgba(88, 87, 87, 0.6);
@@ -172,7 +179,7 @@ input[type="radio"]:checked {
     
   }
   .Overlay p{
-    font-size: 25px;
+    font-size: 16px;
     color: #7B5F5B;
     margin-top: 10px;
     padding-left: 20px;
@@ -186,32 +193,30 @@ input[type="radio"]:checked {
 
 .modalTitle{
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 100px;
-    padding-top:20px;
+    font-size: 30px;
+    margin-bottom: 10px;
     font-family: 'Lora', serif;
     color: #7B5F5B;
+    margin-top: -20px;
 }
 .buttonArea{
     display: flex;
-    padding: 10px;
-    padding-top: 100px;
+    padding: 0;
     justify-content: space-around;
 }
 .buttonArea button{
-    width: 300px;
+    width: 200px;
     background-color: #7B5F5B;
+    font-size: 20px;
+    height: 50px;
 }
 .Modal i{
     font-size: 30px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
     color: #7B5F5B;
     cursor: pointer;
 }
 .Modal i:hover{
-    color: rgb(185, 67, 67);
-}
-.formBackground{
-    width: 500px;
-    padding: 20px;  
+    color: rgb(221, 174, 174);
 }

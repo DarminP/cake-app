@@ -1,0 +1,12 @@
+
+
+.welcome-area{
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    background-color: white;
+    height: 1300px;
+    opacity: 0.9;
+}

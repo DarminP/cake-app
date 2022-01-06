@@ -1,14 +1,12 @@
+.gridContainer{
+    border: 2px solid rgba(168, 135, 135, 0.6);
+    margin: 30px 60px 30px 60px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
 .gridContainer img{
-    width: 250px;
+    width: 200px;
     margin: 50px;
     box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);
     
 
-}
-.galleryTitle{
-    font-family: 'Mali', cursive;
-    color: rgb(88, 69, 69);
-    font-size: 60px;
-    padding-top: 80px;
-    padding-bottom: 50px;
 }

@@ -5,7 +5,7 @@ function Footer()
 {
     return(
         <div className="myFooter">
-        <p className="footerText"> © Copyright 2021 Aidas Cakes. All rights reserved.</p>
+        <p className="footerText"> © Copyright 2022 Aidas Cakes. All rights reserved.</p>
         <p className="footerText">Följ mig på instagram:</p>
         <a href="https://instagram.com/aidahadzii?utm_medium=copy_link" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
         </div>

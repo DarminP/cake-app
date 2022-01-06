@@ -41,7 +41,7 @@ const Post = () => {
     <div className="postPage">
     <Header />
     <div className="presentationSection">
-      <h2 className="postTitle">Posts</h2>
+      <h2 className="subtitles">Posts</h2>
       {PostList.map((post) => {
         return (
           <div>

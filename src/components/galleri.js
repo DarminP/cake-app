@@ -23,7 +23,7 @@ function Galleri() {
         <div>
         <Header /> 
         <div className="presentationSection">
-        <h2 className="galleryTitle">Galleri</h2> 
+        <h2 className="subtitles">Galleri</h2> 
         <div className="gridContainer">
         <img src={Photo1} alt="cake"/>
         <img src={Photo2} alt="cake2"/>

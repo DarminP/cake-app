@@ -1,3 +1,6 @@
+.navbar{
+    padding: 0;
+}
 .navContainer{
     display: flex;
     align-items: center;
@@ -6,12 +9,13 @@
 }
 .navContainer ul{
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .navContainer ul a{
     text-decoration: none;
     color: #E8DEC6;
     /* margin: 0 20px 0 20px; */
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Lora', serif;
 }
 .navContainer ul a:hover{
@@ -22,12 +26,22 @@
     border-left: 1px solid  #ac8980; 
     transition: all 0.3s ease-out;
 }
+.link:first-child{
+    display: none;
+}
 .link:last-child{
     border-right: 1px solid  #ac8980
+}
+
+.link:visited{
+    background-color: #ac8980;
+}
+.link:focus{
+    background-color: #ac8980;
 }
 .link:hover{
     background-color: #ac8980;
 }
-.link::after{
+.link:active{
     background-color: #ac8980;
 }

@@ -1,5 +1,5 @@
 .presentationSection{
-    width: 70%;
+    width: 60%;
     height: 100%;
     margin: auto;
     background-image: linear-gradient(to bottom right,  white, rgba(194, 157, 157, 0.6));
@@ -7,9 +7,10 @@
 }
 .titlePic{
     padding-top: 30px;
+    width: 40%;
 }
 .line{
-    width: 85%;
+    width: 75%;
     border-bottom: 2.5px solid rgba(168, 135, 135, 0.6);
     margin: 0 auto;
     margin-top: 50px;
@@ -24,30 +25,36 @@
     
 }
 .profileSection img{
-    width: 400px;
-    height: 480px;
+    width: 280px;
+    height: 336px;
     margin-top: 100px;
     margin-left: 30px;
+    
 }
 .profileText{
     padding-left: 120px;
-    margin-right: 20px;
-    width: 700px;
+    margin-right: 40px;
+    width: 500px;
+    text-align: justify;
 }
-.profileText h2{
-    font-size: 70px;
+/* .profileText h2{
+    font-size: 50px;
     font-family: 'Pinyon Script', cursive;
-    text-align: center;
+    font-family: 'Spartan', sans-serif;
+    text-align: left;
     margin-bottom: 30px;
     color: rgb(88, 69, 69);
-}
+    text-shadow: .5px .5px 1px rgb(77, 72, 72);
+} */
 .profileText p{
     padding-bottom: 20px;
     color: rgb(44, 39, 39);
-    font-family: 'Mali', cursive;
-    font-size: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
     letter-spacing: 1px;
-    text-shadow: .5px .5px 1px rgb(77, 72, 72);
+}
+.profileText h2{
+    text-align: left;
 }
 
 /* Here i´m styling picture part of the homepage*/
@@ -78,18 +85,34 @@
     
     margin-bottom: -100px;
 }
-.WelcomeButtonArea{
-    padding-bottom: 200px;
-}
+
 .undertitleProfil{
-    font-size: 40px;
-    font-family: 'Mali', cursive;
+    font-size: 26px;
     text-align: center;
     margin-bottom: 30px;
     color: rgb(88, 69, 69);
+    font-family: 'Spartan', sans-serif;
+    text-shadow: .5px .5px 1px rgb(77, 72, 72);
 }
-
-
+.WelcomeButtonArea{
+    padding-bottom: 200px;
+}
+.WelcomeButtonArea button{
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+ }
+ .WelcomeButtonArea button:hover{
+    background-color: #ac8980;
+ }
+ .WelcomeButtonArea a{
+    font-family: 'Lora', serif;
+    color: white;
+ }
+ .WelcomeButtonArea a:link{
+     text-decoration: none;
+ }
 /* Here i´m styling responsivnes*/
 
 @media screen and (max-width: 1600px){

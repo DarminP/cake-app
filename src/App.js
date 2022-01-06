@@ -3,25 +3,26 @@ import Home from "./components/Home";
 import Galleri from "./components/galleri"
 import Post from "./components/Post";
 import NewOrder from "./components/neworder";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
+
 
 
 
 function App() {
 
   return (
-    <BrowserRouter>
+    <Router>
     <div className="App">
       <Routes>
-        <Route  path="/" element={<WelcomePage />}/>
+        <Route path="/" element={<WelcomePage />}/>
         <Route path="/home" element={<Home />}/>
         <Route path="/galleri" element={<Galleri />}/>
         <Route path="/post" element={<Post />}/>
         <Route path="/neworder" element={<NewOrder />}/>
       </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
       );
     }
     

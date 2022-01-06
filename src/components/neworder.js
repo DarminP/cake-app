@@ -87,7 +87,7 @@ class NewOrder extends React.Component{
             <div>
                 <Header/>
                 <div className="presentationSection">
-                <h2 className="orderTitle">Beställning</h2> 
+                <h2 className="subtitles">Beställning</h2> 
                 <div className="formContainer">
                 <h2 className="newOrderTitle">Beställ tårtan som passar dig!</h2>
                 <div className="formBackground">
@@ -113,7 +113,7 @@ class NewOrder extends React.Component{
                     <input name="phonenumber"  type="number" value={this.state.inputs} onChange={(event) => this.handleChangeInputs(event, "phonenumber")}/>
                     
                 </label>
-                <label>
+                <label className="select-label">
                 Välj design
                 <select value={this.state.design} onChange={this.handleChangeDesign}>
                     <option value="chooseDesign">--Välj design för din tårta--</option>
@@ -122,7 +122,7 @@ class NewOrder extends React.Component{
                     <option value="Super Lyx Design">Super-Lyx Design</option>
                 </select>
                 </label>
-                <label>
+                <label className="select-label">
                 Välj smak
                 <select value={this.state.taste} onChange={this.handleChangeTaste}>
                     <option value="choosetaste">--Välj smak för din tårta--</option>
@@ -174,8 +174,8 @@ class NewOrder extends React.Component{
                <p>{`Ovriga önskemål: ${this.state.message}`}</p>
                </div>
                <div className="buttonArea">
-               <button className="newOrderButton" onClick={this.handleCloseModal}>Gå tillbaka</button>
-               <button className="newOrderButton" onClick={this.handleSendMail} >Skicka din order till Aida</button>              
+               <button className="newOrderButton" onClick={this.handleCloseModal}>Tillbaka</button>
+               <button className="newOrderButton" onClick={this.handleSendMail} >Skicka din order</button>              
                </div>
              </Modal>  
             <Footer />
