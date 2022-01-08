@@ -4,6 +4,7 @@ import Galleri from "./components/galleri"
 import Post from "./components/Post";
 import NewOrder from "./components/neworder";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import SimpleReactLightbox from 'simple-react-lightbox'
 import './App.css';
 
 

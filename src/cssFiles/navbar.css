@@ -32,16 +32,6 @@
 .link:last-child{
     border-right: 1px solid  #ac8980
 }
-
-.link:visited{
-    background-color: #ac8980;
-}
-.link:focus{
-    background-color: #ac8980;
-}
 .link:hover{
-    background-color: #ac8980;
-}
-.link:active{
     background-color: #ac8980;
 }

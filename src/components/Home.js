@@ -34,7 +34,7 @@ function Home() {
             <img className="pic3" src={photo3} alt="photo3"></img>
             <img  src={photo4} alt="photo4"></img>
             </div>
-            <h2 className="undertitleProfil">Fler bilder ka du se i galleriet</h2>
+            <h2 className="undertitleProfil">Fler bilder kan du se i galleriet</h2>
             <div className="WelcomeButtonArea">
             <button className="newOrderButton"> <Link to="/galleri">Galleri</Link></button>
             </div>

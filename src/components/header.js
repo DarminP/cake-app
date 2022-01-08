@@ -1,13 +1,16 @@
 // import react from "react";
 import Navbar from "./navbar";
 import "../cssFiles/header.css"
+import Headroom from "react-headroom";
 
 
 
-function Header() {
+
+function Header(props) {
+    
     
     return(
-        
+        <Headroom>
         <div className="header">
             <div className="heroContainer">
                <div className="tagLines">
@@ -20,7 +23,7 @@ function Header() {
                  <Navbar />
             </div>
         </div>
-        
+        </Headroom>
         ) 
     }
     export default Header;

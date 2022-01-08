@@ -7,10 +7,10 @@
     margin-top: 0;
     overflow: hidden;
 }
-.header{
+/* .header{
     position: sticky;
     top: 0;
-}
+} */
 .navbar{
     width: 100%;
     background-color: rgb(88, 69, 69);
@@ -33,5 +33,5 @@
     color: #a09d98;
 }
 .tagLines h2:first-child, .tagLines h2:last-child{
-    padding-top: 8px;
+    padding-top: 10px;
 }

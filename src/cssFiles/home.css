@@ -1,5 +1,5 @@
 .presentationSection{
-    width: 60%;
+    width: 70%;
     height: 100%;
     margin: auto;
     background-image: linear-gradient(to bottom right,  white, rgba(194, 157, 157, 0.6));
@@ -27,25 +27,18 @@
 .profileSection img{
     width: 280px;
     height: 336px;
-    margin-top: 100px;
-    margin-left: 30px;
+    margin-right: 150px;
     
 }
 .profileText{
-    padding-left: 120px;
-    margin-right: 40px;
+    margin-left: 150px;
     width: 500px;
     text-align: justify;
 }
-/* .profileText h2{
-    font-size: 50px;
-    font-family: 'Pinyon Script', cursive;
-    font-family: 'Spartan', sans-serif;
-    text-align: left;
-    margin-bottom: 30px;
-    color: rgb(88, 69, 69);
-    text-shadow: .5px .5px 1px rgb(77, 72, 72);
-} */
+.profileText h2{
+    padding: 0;
+}
+
 .profileText p{
     padding-bottom: 20px;
     color: rgb(44, 39, 39);
@@ -64,9 +57,7 @@
 }
 .pitruresSection img{
     width: 200px;
-    box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);
-    /* padding: 0 10px 0 10px; */
-    
+    box-shadow: 0px 6px 8px 3px rgba(88, 87, 87, 0.6);  
 }
 
 .pitruresSection img:first-child{
@@ -98,21 +89,28 @@
     padding-bottom: 200px;
 }
 .WelcomeButtonArea button{
-    width: 300px;
+    width: 200px;
     height: 60px;
-    border-radius: 10px;
-    cursor: pointer;
+    background-color: #7B5F5B;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px 2px rgba(88, 87, 87, 0.6);
+    border:none;
  }
  .WelcomeButtonArea button:hover{
     background-color: #ac8980;
  }
  .WelcomeButtonArea a{
-    font-family: 'Lora', serif;
-    color: white;
+    color: #E8DEC6;
+    font-size: 40px;
  }
  .WelcomeButtonArea a:link{
      text-decoration: none;
+     font-family: 'Pinyon Script', cursive;
+     
  }
+
 /* Here i´m styling responsivnes*/
 
 @media screen and (max-width: 1600px){

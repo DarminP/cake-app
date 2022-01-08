@@ -186,6 +186,3 @@ class NewOrder extends React.Component{
 }
 export default NewOrder;
                 
-                
-                
-    
